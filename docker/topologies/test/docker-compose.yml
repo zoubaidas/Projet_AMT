@@ -1,0 +1,11 @@
+version: '2'
+services:
+  glassfish:
+    build: ../../images/payara
+    ports:
+      - "8080:8080"
+      - "4848:4848"
+  wildfly:
+    build: build: ../../images/wildfly
+      - "9090:8080"
+      - "9990:9990"
