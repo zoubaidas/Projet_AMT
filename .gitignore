@@ -13,3 +13,5 @@ buildNumber.properties
 .idea/jarRepositories.xml
 .idea/misc.xml
 .idea/vcs.xml
+docker/images/payara/Projet_AMT.war
+docker/images/wildfly/Projet_AMT.war
