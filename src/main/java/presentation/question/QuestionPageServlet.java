@@ -1,4 +1,4 @@
-package login;
+package presentation.question;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,14 +6,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet(name = "LoginCommandServlet")
-public class LoginCommandServlet extends HttpServlet {
+@WebServlet(name = "QuestionPageServlet", urlPatterns = "/QuestionPage")
+public class QuestionPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<h3>Question Page</h3>");
+        out.println("<h3>Answer</h3>");
+        out.println("<h3>Comment an answer</h3>");
     }
 }
