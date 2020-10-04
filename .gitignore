@@ -21,3 +21,4 @@ docker/images/wildfly/Projet_AMT.war
 .idea/webContexts.xml
 .idea/encodings.xml
 .idea/encodings.xml
+.idea/workspace.xml
