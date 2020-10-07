@@ -31,6 +31,6 @@ jobs:
       run: |
         echo ${{ secrets.ZOUBAIDAS_AT }}
         echo ${{ secrets.ZOUBAIDAS_AT }} || docker login ghcr.io -u zoubaidas --password-stdin
-        docker build -t zoubaidas/overflowstack .
+        docker build -t zoubaidas/overflowstack ..
         docker tag zoubaidas/overflowstack ghcr.io/zoubaidas/Projet_AMT
         docker push ghcr.io/zoubaidas/Projet_AMT
