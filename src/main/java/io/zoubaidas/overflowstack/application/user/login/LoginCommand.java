@@ -1,4 +1,4 @@
-package model;
+package io.zoubaidas.overflowstack.application.user.login;
 
 import lombok.Builder;
 import lombok.Getter;

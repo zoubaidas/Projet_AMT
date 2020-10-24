@@ -1,6 +1,4 @@
-package presentation.login;
-
-import model.LoginCommand;
+package io.zoubaidas.overflowstack.ui.web.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,14 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "LoginCommandServlet", urlPatterns = "/Login")
-public class LoginCommandServlet extends HttpServlet {
+@WebServlet(name = "LogoutCommandServlet")
+public class LogoutCommandServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LoginCommand command = LoginCommand.builder()
-                .email(request.getParameter("Username"))
-                .password(request.getParameter("Password"))
-                .build();
-
 
     }
 

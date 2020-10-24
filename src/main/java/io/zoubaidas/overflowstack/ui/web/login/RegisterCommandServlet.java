@@ -1,4 +1,4 @@
-package presentation.login;
+package io.zoubaidas.overflowstack.ui.web.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +13,7 @@ public class RegisterCommandServlet extends HttpServlet {
 
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,     IOException {
 
     }
 }

@@ -1,4 +1,4 @@
-package filter;
+package io.zoubaidas.overflowstack.ui.web.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

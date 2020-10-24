@@ -1,4 +1,4 @@
-package presentation.question;
+package io.zoubaidas.overflowstack.ui.web.question;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
