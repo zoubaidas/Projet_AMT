@@ -7,21 +7,21 @@
 
     <servlet>
         <servlet-name>HomePageServlet</servlet-name>
-        <servlet-class>presentation.home.HomePageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.home.HomePageServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>LoginPageServlet</servlet-name>
-        <servlet-class>presentation.login.LoginPageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.login.LoginPageServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProfilePageServlet</servlet-name>
-        <servlet-class>presentation.profile.ProfilePageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.profile.ProfilePageServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>QuestionsPageServlet</servlet-name>
-        <servlet-class>presentation.quetions.QuestionsPageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.quetions.QuestionsPageServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
