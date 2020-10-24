@@ -8,6 +8,6 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode
 public class LoginCommand {
-    private String email;
+    private String username;
     private String password;
 }
