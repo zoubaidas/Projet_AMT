@@ -21,9 +21,10 @@ public class User implements IEntity<User, UserId> {
     @EqualsAndHashCode.Exclude
     private String encryptedPwd;
 
-    public boolean authenticate(String clearPwd) {
+    public boolean login(String clearPwd) {
         //TODO Add encryption !
-        return clearPwd.equals(encryptedPwd);
+        String computed = clearPwd;
+        return computed.equals(encryptedPwd);
     }
 
     @Override
