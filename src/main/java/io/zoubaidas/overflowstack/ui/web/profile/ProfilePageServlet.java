@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "ProfilePageServlet", urlPatterns ="/ProfilePage")
+@WebServlet(name = "ProfilePageServlet", urlPatterns = "/profile")
 public class ProfilePageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
