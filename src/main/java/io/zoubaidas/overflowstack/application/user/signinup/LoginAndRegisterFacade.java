@@ -16,25 +16,28 @@ public class LoginAndRegisterFacade {
         this.userRepository = userRepository;
     }
 
-    public void register(RegisterCommand command) throws RegistrationFailedException {
+    public UserDTO register(RegisterCommand command) throws RegistrationFailedException {
         User existingUser = userRepository.findByUsername(command.getUsername()).orElse(null);
 
         if (existingUser != null) {
             throw new RegistrationFailedException("Used username ");
         }
+        User user = User.builder()
+                .username(command.getUsername())
+                .email(command.getEmail())
+                .firstName(command.getFirstName())
+                .lastName(command.getLastName())
+                .clearPwd(command.getPassword())
+                .build();
+        userRepository.save(user);
 
-        try {
-            User user = User.builder()
-                    .username(command.getUsername())
-                    .email(command.getEmail())
-                    .firstName(command.getFirstName())
-                    .lastName(command.getLastName())
-                    .clearPwd(command.getPassword())
-                    .build();
-            userRepository.save(user);
-        } catch (Exception e) {
-            throw new RegistrationFailedException(e.getMessage());
-        }
+        return UserDTO.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
+                .build();
     }
 
     public UserDTO login(LoginCommand command) throws LoginFailedException {
@@ -44,6 +47,7 @@ public class LoginAndRegisterFacade {
             throw new LoginFailedException("Wrong password");
 
         return UserDTO.builder()
+                .id(user.getId())
                 .username(user.getUsername())
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
