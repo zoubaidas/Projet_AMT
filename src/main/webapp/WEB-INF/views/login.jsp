@@ -21,13 +21,13 @@
     }
 %>
 <br/>
-SingIn!
+<h1>SingIn!</h1>
 <form action="/login.do" method="post">
     Username:<input type="text" name="username"/><br/><br/>
     Password:<input type="password" name="password"/><br/><br/>
     <input type="submit" value="login"/>"
 </form>
-SignUp!
+<h1>SignUp!</h1>
 <form action="/register.do" method="post">
     Username:<input type="text" name="username"/><br/><br/>
     First name:<input type="text" name="firstName"/><br/><br/>
