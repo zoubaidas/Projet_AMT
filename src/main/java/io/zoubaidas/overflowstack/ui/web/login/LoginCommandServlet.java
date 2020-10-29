@@ -16,19 +16,15 @@ import java.util.List;
 
 @WebServlet(name = "LoginCommandServlet", urlPatterns = "/login.do")
 public class LoginCommandServlet extends HttpServlet {
-    ServiceRegistry serviceRegistry = new ServiceRegistry();
+    LoginAndRegisterFacade loginAndRegisterFacade = ServiceRegistry.getLoginAndRegisterFacade();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LoginAndRegisterFacade identityManagementFacade = serviceRegistry.getLoginAndRegisterFacade();
-
         LoginCommand command = LoginCommand.builder()
                 .username(request.getParameter("username"))
                 .password(request.getParameter("password"))
                 .build();
-
         try {
-
-            UserDTO user = identityManagementFacade.login(command);
+            UserDTO user = loginAndRegisterFacade.login(command);
             request.getSession().setAttribute("currentUser", user);
             String targetUrl = "/questions";
             response.sendRedirect(targetUrl);
@@ -39,5 +35,4 @@ public class LoginCommandServlet extends HttpServlet {
             return;
         }
     }
-
 }
