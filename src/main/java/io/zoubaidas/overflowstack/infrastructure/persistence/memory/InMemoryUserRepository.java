@@ -16,14 +16,14 @@ public class InMemoryUserRepository extends InMemoryRepository<User, UserId> imp
     @Override
     public void save(User user){
         synchronized (user.getUsername()){
-            if(!findByUsername(user.getUsername()).isEmpty()){
+            if(findByUsername(user.getUsername()).isPresent()){
                 throw new IntegrityConstraintViolationException("username already exists");
             }
         }
         super.save(user);
     }
 
-
+    @Override
     public Optional<User> findByUsername(String username){
         List<User> matchingUsers = findAll().stream()
                 .filter(user -> user.getUsername().equals(username))
