@@ -26,13 +26,18 @@
     </servlet>
 
     <servlet>
+        <servlet-name>AddQuestionCommandServlet</servlet-name>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.question.AddQuestionCommandServlet</servlet-class>
+    </servlet>
+
+    <servlet>
         <servlet-name>ProfilePageServlet</servlet-name>
         <servlet-class>io.zoubaidas.overflowstack.ui.web.profile.ProfilePageServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>QuestionsPageServlet</servlet-name>
-        <servlet-class>io.zoubaidas.overflowstack.ui.web.quetions.QuestionsPageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.quetions.QuestionsQueryServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -54,6 +59,12 @@
         <servlet-name>RegisterCommandServlet</servlet-name>
         <url-pattern>/register.do</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddQuestionCommandServlet</servlet-name>
+        <url-pattern>/question.do</url-pattern>
+    </servlet-mapping>
+
 
     <servlet-mapping>
         <servlet-name>ProfilePageServlet</servlet-name>
