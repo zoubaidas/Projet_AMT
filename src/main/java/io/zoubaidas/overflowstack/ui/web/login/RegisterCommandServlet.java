@@ -30,9 +30,10 @@ public class RegisterCommandServlet extends HttpServlet {
                     .lastName(request.getParameter("lastName"))
                     .build();
             try {
-                loginAndRegisterFacade.register(command);
+                UserDTO user = loginAndRegisterFacade.register(command);
+                request.getSession().setAttribute("currentUser", user);
                 String targetUrl = "/questions";
-                response.sendRedirect(targetUrl);
+                response.sendRedirect(request.getContextPath() + targetUrl);
                 return;
             } catch (RegistrationFailedException e) {
                 request.getSession().setAttribute("errors", List.of(e.getMessage()));
