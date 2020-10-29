@@ -28,8 +28,8 @@
     }
 %>
 <br/>
-<form action="${pageContext.request.contextPath}/login.do" method="post">
-    Username:<input type="text" name="usaername"/><br/><br/>
+<form action="/login.do" method="post">
+    Username:<input type="text" name="username"/><br/><br/>
     Password:<input type="password" name="password"/><br/><br/>
     <input type="submit" value="login"/>"
 </form>
