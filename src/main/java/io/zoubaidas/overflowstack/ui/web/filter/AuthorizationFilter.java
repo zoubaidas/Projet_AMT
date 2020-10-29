@@ -13,7 +13,7 @@ public class AuthorizationFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        if (true) {
+        if (false) {
             chain.doFilter(req, resp);
             return;
         }

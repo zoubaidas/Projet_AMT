@@ -29,14 +29,6 @@ public class InMemoryUserRepository extends InMemoryRepository<User, UserId> imp
                 .filter(user -> user.getUsername().equals(username))
                 .collect(Collectors.toList());
 
-        matchingUsers.add(User.builder()
-                .username("zied")
-                .clearPwd("zied")
-                .firstName("zied")
-                .lastName("zied")
-                .email("zied")
-                .build());
-
         if (matchingUsers.size() < 1 ){
             return Optional.empty();
         }
