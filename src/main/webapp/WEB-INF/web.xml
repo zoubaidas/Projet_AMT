@@ -21,6 +21,11 @@
     </servlet>
 
     <servlet>
+        <servlet-name>RegisterCommandServlet</servlet-name>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.login.RegisterCommandServlet</servlet-class>
+    </servlet>
+
+    <servlet>
         <servlet-name>ProfilePageServlet</servlet-name>
         <servlet-class>io.zoubaidas.overflowstack.ui.web.profile.ProfilePageServlet</servlet-class>
     </servlet>
@@ -43,6 +48,11 @@
     <servlet-mapping>
         <servlet-name>LoginCommandServlet</servlet-name>
         <url-pattern>/login.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RegisterCommandServlet</servlet-name>
+        <url-pattern>/register.do</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
