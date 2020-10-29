@@ -1,4 +1,6 @@
 package io.zoubaidas.overflowstack.domain.question;
 
-public interface IQuestionRepository {
+import io.zoubaidas.overflowstack.domain.IRepository;
+
+public interface IQuestionRepository extends IRepository<Question, QuestionId> {
 }
