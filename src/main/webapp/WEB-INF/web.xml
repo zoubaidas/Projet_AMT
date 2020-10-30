@@ -7,21 +7,37 @@
 
     <servlet>
         <servlet-name>HomePageServlet</servlet-name>
-        <servlet-class>presentation.home.HomePageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.home.HomePageServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>LoginPageServlet</servlet-name>
-        <servlet-class>presentation.login.LoginPageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.login.LoginPageServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>LoginCommandServlet</servlet-name>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.login.LoginCommandServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RegisterCommandServlet</servlet-name>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.login.RegisterCommandServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddQuestionCommandServlet</servlet-name>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.question.AddQuestionCommandServlet</servlet-class>
+    </servlet>
+
     <servlet>
         <servlet-name>ProfilePageServlet</servlet-name>
-        <servlet-class>presentation.profile.ProfilePageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.profile.ProfilePageServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>QuestionsPageServlet</servlet-name>
-        <servlet-class>presentation.quetions.QuestionsPageServlet</servlet-class>
+        <servlet-class>io.zoubaidas.overflowstack.ui.web.quetions.QuestionsQueryServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -32,6 +48,21 @@
     <servlet-mapping>
         <servlet-name>LoginPageServlet</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginCommandServlet</servlet-name>
+        <url-pattern>/login.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RegisterCommandServlet</servlet-name>
+        <url-pattern>/register.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddQuestionCommandServlet</servlet-name>
+        <url-pattern>/question.do</url-pattern>
     </servlet-mapping>
 
 
